@@ -434,11 +434,9 @@
     if(!id || !pw){ authHint.textContent = '학번과 비밀번호를 입력해 주세요.'; return; }
 if(currentTab === 'register' && id.length !== 7){
   authHint.textContent = '아이디 형식이 잘못되었습니다.';
-  return;
-}
+  return;}
     authSubmitBtn.disabled = true;
-    authHint.textContent = '확인 중...';
-    const email = idToEmail(id);
+    authHint.textContent = '확인 중...'; const email = idToEmail(id);
 
     try{
       if(currentTab === 'register'){
